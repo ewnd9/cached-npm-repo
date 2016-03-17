@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - '5'
   - '4'
+sudo: true
 before_script:
   - echo "#\!/bin/sh\necho hi" > /usr/bin/xdg-open
   - chmod +x /usr/bin/xdg-open
