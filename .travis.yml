@@ -8,4 +8,4 @@ before_script:
 addons:
   apt:
     packages:
-    - lynx
+      - lynx
