@@ -1,0 +1,36 @@
+{
+  "name": "cached-npm-repo",
+  "version": "0.0.0",
+  "description": "npm repo wrapper with cache for increasing page opening speed",
+  "main": "index.js",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "ava",
+    "test:watch": "test -- --watch",
+    "lint": "eslint *.js",
+    "prepush": "npm run lint && npm test"
+  },
+  "bin": "cli.js",
+  "preferGlobal": "false",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewnd9/cached-npm-repo.git"
+  },
+  "keywords": [
+    "cache",
+    "npm"
+  ],
+  "author": "ewnd9 <ewndnine@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "configstore": "^2.0.0",
+    "opener": "^1.4.1",
+    "proxyquire": "^1.7.4"
+  },
+  "devDependencies": {
+    "ava": "^0.13.0",
+    "eslint": "^1.10.3",
+    "babel-eslint": "^5.0.0-beta9",
+    "husky": "^0.11.3"
+  }
+}
