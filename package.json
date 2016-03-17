@@ -1,6 +1,6 @@
 {
   "name": "cached-npm-repo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "npm repo wrapper with cache for increasing page opening speed",
   "main": "index.js",
   "scripts": {
