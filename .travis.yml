@@ -4,6 +4,8 @@ node_js:
   - '4'
 sudo: false
 before_script:
-  - echo "#\!/bin/sh\necho hi" > /tmp/xdg-open
-  - export PATH=$PATH:/tmp
   - cd /home/travis/build/ewnd9/cached-npm-repo && npm install npm
+addons:
+  apt:
+    packages:
+    - lynx
