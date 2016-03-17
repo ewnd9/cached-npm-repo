@@ -12,7 +12,7 @@ const pkg = process.argv[2];
 
 function exitOnError(err) {
   if (err) {
-    console.log(err.message);
+    console.error(err.message);
     process.exit(1);
   }
 };

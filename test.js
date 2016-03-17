@@ -9,9 +9,19 @@ test('press enter', async t => {
   const proc = spawn('node', ['cli', 'webpack'], { stdio: [null, null, null] });
   proc.stdin.setEncoding('utf-8');
 
-  await new Promise(resolve => {
-    proc.stdout.pipe( concat(result => resolve( result.toString() )) );
-  });
+  function getStream(stream) {
+    return new Promise(resolve => {
+      stream.pipe( concat(result => resolve( result.toString() )) );
+    });
+  };
+
+  const err = await getStream(proc.stderr);
+
+  if (err) {
+    t.fail(err);
+  }
+
+  await getStream(proc.stdout);
 
   const conf = new Configstore('cached-npm-repo');
   t.ok(conf.get('webpack') === 'https://github.com/webpack/webpack');
