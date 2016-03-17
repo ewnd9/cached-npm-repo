@@ -4,5 +4,5 @@ node_js:
   - '4'
 sudo: true
 before_script:
-  - echo "#\!/bin/sh\necho hi" > /usr/bin/xdg-open
-  - chmod +x /usr/bin/xdg-open
+  - echo "#\!/bin/sh\necho hi" > /tmp/xdg-open
+  - export PATH=$PATH:/tmp
