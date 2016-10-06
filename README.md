@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ewnd9/cached-npm-repo.svg?branch=master)](https://travis-ci.org/ewnd9/cached-npm-repo)
 
-`$ npm repo <pgkg>` wrapper with cache for increasing page opening speed
+`$ npm repo <pkg>` wrapper with cache for increasing page opening speed
 
 ## Install
 
