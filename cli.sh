@@ -3,7 +3,7 @@
 PKG=$1
 FOUNDED=false
 
-DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIRNAME="$( cd "$( dirname "$(readlink -f ${BASH_SOURCE[0]})" )" && pwd )"
 cd $DIRNAME
 
 for f in $HOME/.npm/$PKG/*/package/package.json; do
