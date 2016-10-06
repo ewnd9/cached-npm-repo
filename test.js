@@ -5,6 +5,8 @@ import concat from 'concat-stream';
 
 import Configstore from 'configstore';
 
+process.env.NODE_ENV = 'test';
+
 test('press enter', async t => {
   const proc = spawn('node', ['cli', 'webpack'], { stdio: [null, null, null] });
   proc.stdin.setEncoding('utf-8');

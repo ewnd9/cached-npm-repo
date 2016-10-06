@@ -9,6 +9,7 @@ const Configstore = require('configstore');
 const conf = new Configstore('cached-npm-repo');
 
 const pkg = process.argv[2];
+const NODE_ENV = process.env.NODE_ENV;
 
 function exitOnError(err) {
   if (err) {
@@ -48,6 +49,6 @@ npm.load({}, function(err) {
   };
 
   function open(url) {
-    opener(url, { command: npm.config.get('browser') }, exitOnError);
+    opener(url, { command: NODE_ENV === 'test' ? 'echo' : npm.config.get('browser') }, exitOnError);
   }
 });
