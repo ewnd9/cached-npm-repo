@@ -1,9 +1,8 @@
 # cached-npm-repo
 
-[![Build Status](https://travis-ci.org/ewnd9/cached-npm-repo.svg?branch=master)](https://travis-ci.org/ewnd9/cached-npm-repo) :warning: only 4.x and 5.x node support
+[![Build Status](https://travis-ci.org/ewnd9/cached-npm-repo.svg?branch=master)](https://travis-ci.org/ewnd9/cached-npm-repo)
 
-
-`$ npm repo` wrapper with cache for increasing page opening speed
+`$ npm repo <pgkg>` wrapper with cache for increasing page opening speed
 
 ## Install
 
@@ -22,7 +21,7 @@ $ cached-npm-repo --delete <pkg-name> # clear cache in case of changing url
 
 Make an alias like in your `.bashrc` / `.zshrc`
 
-```bash
+```sh
 alias npr="cached-npm-repo"
 ```
 
