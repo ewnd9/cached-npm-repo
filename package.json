@@ -10,8 +10,8 @@
     "lint": "eslint *.js",
     "prepush": "npm run lint && npm test"
   },
-  "bin": "cli.js",
-  "preferGlobal": "false",
+  "bin": "cli.sh",
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ewnd9/cached-npm-repo.git"
@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "configstore": "^2.0.0",
+    "hosted-git-info": "^2.1.5",
     "opener": "^1.4.1",
     "proxyquire": "^1.7.4"
   },
