@@ -6,9 +6,7 @@
 
 ## Install
 
-```
-$ npm install -g cached-npm-repo
-```
+The `cached-npm-repo` package was manually unpublished from npm on 2025-08-28. The name has been released for potential future use.
 
 ## Usage
 
